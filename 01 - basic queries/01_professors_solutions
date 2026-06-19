@@ -1,0 +1,40 @@
+-- Correction des exercices du TP1
+-- EPFC-ULB
+
+-- Q1
+SELECT *
+FROM s;
+
+-- Q2
+SELECT sname NOM, city VILLE
+FROM s;
+
+-- Q3
+SELECT sname
+FROM s
+WHERE city='London' OR city='Paris';
+
+-- Q4
+SELECT sname
+FROM s
+WHERE status < 25 AND city='Paris';
+
+-- Q5
+SELECT sname
+FROM s
+WHERE status NOT BETWEEN 15 AND 25;
+
+-- Q5 : autre solution
+SELECT sname
+FROM s
+WHERE status < 15 OR status >25;
+
+-- Q5 : autre solution
+SELECT sname
+FROM s
+WHERE NOT(status >= 15 AND status <= 25);
+
+-- Q6
+SELECT DISTINCT PNAME
+FROM p
+WHERE  Color = 'RED' OR Color = 'BLUE';
